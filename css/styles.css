@@ -1,1 +1,89 @@
+/* ===============================================
+                    Global
+================================================*/
 
+body {
+    background-color: #FFD7B8;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    color:  #4E54D9;
+}
+
+/* ==============================================
+                    Top Section
+===============================================*/
+#topCardGrid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+    background-color: #FFB77B;
+    text-align: center;      
+}
+
+#topCardItem {   
+    height: 50vh;
+    
+    align-self: center;
+   justify-self: center;
+}
+
+/* ==============================================
+                    Page Grid
+===============================================*/
+
+#burgerPageGrid {
+    display: grid;
+    grid-template-columns: auto;    
+    align-items: center;
+    justify-content: center; 
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.burgerPageItem {            
+    text-align: center;  
+    border: 2px solid salmon;  
+}
+
+.burgerhr {
+    border: 1px solid #FF9726;
+    max-width: 200px;
+}
+
+/* ==============================================
+                Section Styling
+===============================================*/
+
+.questionWrap {
+    background-color: #FFE5D2;
+    padding: 10px 50px 5px 50px;
+    border-radius: 5px;
+}
+
+/* =============== Button Grid ================= */
+
+.btnGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    color: #FFF;
+    font-size: 18px;
+    justify-content: space-evenly;
+}
+
+.btnItem {
+    background-color: #FF8785;
+    padding: 2px 20px 2px 20px;    
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 444px) {
+    .btnGrid {
+        grid-template-columns: auto;
+    } 
+}

@@ -13,6 +13,7 @@
     <!-- Styles        --> <link rel="stylesheet" type="text/css" href="css/styles.css">    
     <!-- jQuery        --> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Font: Lobster --> <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lobster&display=swap" rel="stylesheet">
+    
     <base href="/" target="blank">
 </head>
  
@@ -32,8 +33,11 @@
         // Insert Script 
     }); //End DOM Ready
 </script>
- 
-<!-- ============================= 
+
+ <!-- Free Code Camp Testing --> <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+ <!-- ============================= 
             HTML MARKUP
      =============================
 -->
@@ -53,7 +57,13 @@
 
         <!-- Grid -->
         <div id="burgerPageGrid">
-           
+            <!-- Form Start -->
+            <form id="survey-form">
+           <!-- =========== Decription Section ========== -->
+           <div class="burgerPageItem">
+                <p id="description">Choose your ingredients!</p>
+            </div> <!-- End Section -->
+
            <!-- =========== Bun Section ========== -->
             <div class="burgerPageItem">
                <div class="questionWrap">
@@ -65,10 +75,26 @@
 
             <!-- Button Grid -->
                <div class="btnGrid">
-                    <a class="btnItem">Sourdough</a>
-                    <a class="btnItem">Sourdough</a>
-                    <a class="btnItem">Sourdough</a>
-               </div>
+                
+                <!-- Radios -->
+                <fieldset class="row">
+                    <div class="btnItem">                        
+                        <input type="radio" name="attribute" id="breadRadios1" value="breadSourdough">
+                        <label for="breadRadios1">Sourdough</label>                        
+                  </div>
+
+                    <div class="btnItem">                        
+                          <input type="radio" name="attribute" id="breadRadios2" value="breadRiceBun">
+                          <label for="breadRadios2">Rice Bun</label>                        
+                    </div>
+
+                    <div class="btnItem">                        
+                        <input type="radio" name="attribute" id="breadRadios3" value="breadBrioche">
+                        <label for="breadRadios3">Brioche</label>                        
+                  </div>
+                  </fieldset>            
+               
+                </div>
                <hr class="burgerhr">
            </div> <!-- End Section -->
 
@@ -83,9 +109,24 @@
 
          <!-- Button Grid -->
             <div class="btnGrid">
-                 <a class="btnItem">Sourdough</a>
-                 <a class="btnItem">Sourdough</a>
-                 <a class="btnItem">Sourdough</a>
+                 <!-- Radios -->
+                <fieldset class="row">
+                    <div class="btnItem">                        
+                        <input type="radio" name="attribute" id="pattyRadios1" value="pattyEggplant">
+                        <label for="pattyRadios1">Eggplant</label>                        
+                  </div>
+
+                    <div class="btnItem">                        
+                          <input type="radio" name="attribute" id="pattyRadios2" value="pattyHalloumi">
+                          <label for="pattyRadios2">Halloumi</label>                        
+                    </div>
+
+                    <div class="btnItem">                        
+                        <input type="radio" name="attribute" id="pattyRadios3" value="pattyBeef">
+                        <label for="pattyRadios3">Beef</label>                        
+                  </div>
+                  </fieldset>   
+
             </div>
             <hr class="burgerhr">
         </div> <!-- End Section -->
@@ -101,9 +142,24 @@
 
          <!-- Button Grid -->
             <div class="btnGrid">
-                 <a class="btnItem">Sourdough</a>
-                 <a class="btnItem">Sourdough</a>
-                 <a class="btnItem">Sourdough</a>
+                 <!-- Radios -->
+                <fieldset class="row">
+                    <div class="btnItem">                        
+                        <input type="radio" name="attribute" id="cheeseRadios1" value="cheeseSoyBased">
+                        <label for="cheeseRadios1">Soy Based</label>                        
+                  </div>
+
+                    <div class="btnItem">                        
+                          <input type="radio" name="attribute" id="cheeseRadios2" value="cheeseSwiss">
+                          <label for="cheeseRadios2">Swiss</label>                        
+                    </div>
+
+                    <div class="btnItem">                        
+                        <input type="radio" name="attribute" id="cheeseRadios3" value="cheeseCheddar">
+                        <label for="cheeseRadios3">Cheddar</label>                        
+                  </div>
+                  </fieldset>   
+
             </div>
             <hr class="burgerhr">
         </div> <!-- End Section -->
@@ -119,11 +175,61 @@
 
          <!-- Button Grid -->
             <div class="btnGrid">
-                 <a class="btnItem">Lettuce</a>
-                 <a class="btnItem">Tomato</a>
-                 <a class="btnItem">Pickles</a>
+                <div class="row form-group">
+                    <!-- Checkboxes -->
+                    <div class="btnItem">
+                        <input type="checkbox" id="extrasCheckbox1" value="extrasLettuce" name="extrasTomato">
+                        <label for="extrasCheckbox1">Lettuce</label>
+                    </div>
+
+                    <div class="btnItem">
+                        <input type="checkbox" id="extrasCheckbox2" value="extrasTomato" name="extrasTomato">
+                        <label for="extrasCheckbox2">Tomato</label>
+                    </div>
+
+                    <div class="btnItem">
+                        <input type="checkbox" id="extrasCheckbox3" value="extrasPickles" name="extrasTomato">
+                        <label for="extrasCheckbox3">Pickles</label>
+                    </div>                    
+
+                </div>
+                 
             </div>
             <hr class="burgerhr">
+        </div> <!-- End Section -->
+
+        <!-- =========== Bottom Form Section ========== -->
+        <div class="burgerPageItem">            
+                <div class="form-group">
+                  <label id="name-label" for="name">Name</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="eg. Jane Doe" required>                  
+                </div>                
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="eg. test@test.com" required>                  
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="number">Quantity</label>
+                    <input type="number" class="form-control" id="number" aria-describedby="number" placeholder="eg. 1"  min="1" max="5" required>                  
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="number">Receive your burger</label>
+                    <select id="dropdown" class="form-control">
+                        <option value="">Please select...</option>
+                        <option value="pickup">Pickup</option>
+                        <option value="delivery">Delivery (+$5.00)</option>
+                      </select>    
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea class="form-control" id="notes" aria-describedby="notes" placeholder="Notes (Optional)"></textarea>                  
+                </div>            
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+              </form>
         </div> <!-- End Section -->
 
 

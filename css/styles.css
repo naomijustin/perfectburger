@@ -68,18 +68,18 @@ h3 {
 /* =============== Button Grid ================= */
 
 .btnGrid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 20px;
-    color: #FFF;
+    display: grid;    
+    grid-gap: 10px;
+    color: #FFF;    
     font-size: 18px;
     justify-content: space-evenly;
 }
 
 .btnItem {
     background-color: #FF8785;
-    padding: 2px 20px 2px 20px;    
-    border-radius: 30px;
+    padding: 5px 20px 0px 20px;    
+    border-radius: 30px;    
+    margin: 0px 5px 0px 5px;
 }
 
 @media only screen and (max-width: 444px) {

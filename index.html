@@ -28,9 +28,20 @@
                 SCRIPT
      =============================
 -->
+
 <script>
+
+
+
     $(document).ready( function () {
-        // Insert Script 
+        
+        
+   // Submit Form
+   document.getElementById("submit").addEventListener("click", function(event){
+        var nameField = document.getElementById('name').value;
+        alert("Thank you " + nameField + ", your order has been received!");
+    });
+
     }); //End DOM Ready
 </script>
 
@@ -57,8 +68,10 @@
 
         <!-- Grid -->
         <div id="burgerPageGrid">
+
+
             <!-- Form Start -->
-            <form id="survey-form">
+            <form target="_self" id="survey-form">
            <!-- =========== Decription Section ========== -->
            <div class="burgerPageItem">
                 <p id="description">Choose your ingredients!</p>
@@ -217,9 +230,31 @@
               </form>
         </div> <!-- End Section -->
 
-
         </div> <!-- End Burger Grid -->
     </main>
+
+    <footer>
+        <div id="footerBG">
+            <div style="padding-bottom: 10px;"> 
+            <!-- LinkedIn -->
+             <a href="https://www.linkedin.com/in/naomi-justin/" target="_blank"><i class="fab fa-linkedin-in socialMediaIcon"></i></a>&emsp; 
+             <!-- GitHub -->
+             <a href="https://github.com/naomijustin" target="_blank"><i class="fab fa-github socialMediaIcon"></i></a>&emsp;
+             <!-- Instagram -->
+             <a href="https://www.instagram.com/naomiartmedia/" target="_blank"><i class="fab fa-instagram socialMediaIcon"></i></a>&emsp;
+             <!-- Website -->
+              <a href="https://naomijustin.com/" target="_blank"><i class="fas fa-globe socialMediaIcon"></i></a>&emsp;              
+            </div>             
+             &copy; <!-- Copyright -->
+             <!-- Dynamic Year-->
+             <script type="text/javascript">
+              document.write(new Date().getFullYear());
+            </script> 
+            Naomi Justin. All Rights Reserved.
+            
+           
+          </div>
+    </footer>
  
 </body>
 </html>

@@ -46,8 +46,7 @@ h3 {
 }
 
 .burgerPageItem {            
-    text-align: center;  
-    border: 2px solid salmon;  
+    text-align: center;      
 }
 
 .burgerhr {
@@ -81,6 +80,36 @@ h3 {
     border-radius: 30px;    
     margin: 0px 5px 0px 5px;
 }
+
+
+ /* ======================================== 
+                  Footer
+======================================== */
+
+footer {
+    padding-top: 15px;
+}
+
+#footerBG {
+background-color: #FF8785;
+text-align: center;
+padding: 15px;
+color: #ffd7d6;
+font-size: 17px;
+font-weight: 500;
+}
+
+.socialMediaIcon {
+color: #ffd7d6;
+font-size: 22px;
+}
+
+.socialMediaIcon:hover {
+color: #FFF;
+}
+    
+
+
 
 /* ===============================================
                 Responsive

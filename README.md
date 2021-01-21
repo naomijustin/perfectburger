@@ -34,11 +34,12 @@ https://codepen.io/freeCodeCamp/full/VPaoNP
 ## Technologies
 * HTML
 * CSS
-* "SVG Path Builder" by Anthony Dugios
 * Bootstrap
+* Procreate (design mockup)
+* Adobe Illustrator (illustrations)
  
 ## Illustrations
-* All SVGs created using the SVG Path Builder.
+* All SVGs created using Adobe Illustrator.
  
 ## Launch
 * Site will be deployed on Github at https://naomijustin.github.io/perfectburger/ by February 2021.

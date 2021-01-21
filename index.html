@@ -31,9 +31,36 @@
 
 <script>
     
-    $(document).ready( function () {
     
+
+    $(document).ready(function() {
+        var inputCheck = $('.checkedColour');
+    
+    
+    // Attempt 1
+    // for (i = 0; i < inputCheck.length; i++) {        
+    //     inputCheck[i].click(function() {
+    //         inputCheck[i].parentElement.
+    //         alert("checked");
+    //     });
+    // }
+
+        
+
     // Checked Colour Change
+    
+    // Attempt 2
+    // for (i = 0; i < btnCheck.length; i++) {
+    //     for (a = 0; a < inputCheck.length; a++) {
+    //         inputCheck.addEventListener("click", function(event) {
+    //             if (inputCheck[a].checked == true) {
+    //             btnCheck[i].css("background-color: #CF62F0")
+    //             }
+    //         }  
+    //     }
+    // }
+    // if(document.getElementsByClassName('checkedColour').checked) {        
+    // }
 
         
    // Submit Form
@@ -60,11 +87,42 @@
             <div id="topCardItem">
                 <h2>Your Perfect</h2>
                 <h1 id="title">Burger</h1>
-                <div>insert image</div>
+                <div>
+                    
+
+                    <!-- TEST SVG-->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+<g>
+	<defs>
+		<path id="Clipping_Path_1_" d="M92.333,230c-1.458-54,67.333-81.583,67.333-81.583s1.503-0.716,9.5-2.917
+			c14.083-3.875,68.789-9.841,89.208-9.648c9.861,0.093,6.229,0.169,37.125,1.148c36.834,1.167,62.116,8.461,98.334,41.5
+			c24.651,22.488,23.427,49.764,20.688,53.404c-9.354,12.43-59.772,21.605-88.021,23.299c-28.249,1.695-13.087,1.348-100-0.869
+			c-49.791-1.271-78.676-7.147-117.667-12.167C90.709,239.833,92.333,230,92.333,230L92.333,230z"/>
+	</defs>
+	<clipPath id="Clipping_Path_2_">
+		<use xlink:href="#Clipping_Path_1_"  overflow="visible"/>
+	</clipPath>
+	<path id="Burger_Bun" clip-path="url(#Clipping_Path_2_)" fill="#FF9827" d="M92.333,230c-1.458-54,67.333-81.583,67.333-81.583
+		s1.503-0.716,9.5-2.917c14.083-3.875,68.789-9.841,89.208-9.648c9.861,0.093,6.229,0.169,37.125,1.148
+		c36.834,1.167,62.116,8.461,98.334,41.5c24.651,22.488,23.427,49.764,20.688,53.404c-9.354,12.43-59.772,21.605-88.021,23.299
+		c-28.249,1.695-13.087,1.348-100-0.869c-49.791-1.271-78.676-7.147-117.667-12.167C90.709,239.833,92.333,230,92.333,230
+		L92.333,230z"/>
+	<path id="Bun_Shadow" clip-path="url(#Clipping_Path_2_)" fill="#FF7529" d="M97.243,197.868
+		c4.757,34.965,10.007,24.548,33.257,29.798s26.815,7.441,62.667,4.167c36.5-3.333,50.417,9.583,74.667,6.833
+		s16.167-4.333,55.667-6.833s35.583,2.833,59.833-3.167s31.17-25.983,31.917-23.917c3.583,9.917,1.917,27.75,1.917,27.75
+		L399,244.667c0,0-21.167,9.667-28.25,10.333c-79.704,7.506-50.25,11.25-143,5.25S106.5,252.75,93.5,238.5
+		S97.243,197.868,97.243,197.868z"/>
+</g>
+</svg>
+                    <!-- END TEST SVG-->
+                </div>
             </div>
             
         </div>
 
+        <!-- Wave -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFB77B" fill-opacity="1" d="M0,96L26.7,106.7C53.3,117,107,139,160,149.3C213.3,160,267,160,320,144C373.3,128,427,96,480,90.7C533.3,85,587,107,640,149.3C693.3,192,747,256,800,261.3C853.3,267,907,213,960,208C1013.3,203,1067,245,1120,272C1173.3,299,1227,309,1280,298.7C1333.3,288,1387,256,1413,240L1440,224L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
 
         <!-- Grid -->
         <div id="burgerPageGrid">
@@ -89,17 +147,17 @@
                 <!-- Button Grid / Radios -->
                 <fieldset class="btnGrid">
                     <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="breadRadios1" value="breadSourdough">
+                        <input type="radio" name="attribute" id="breadRadios1" value="breadSourdough" class="checkedColour">
                         <label for="breadRadios1">Sourdough</label>                        
                   </div>
 
                     <div class="btnItem">                        
-                          <input type="radio" name="attribute" id="breadRadios2" value="breadRiceBun">
+                          <input type="radio" name="attribute" id="breadRadios2" value="breadRiceBun" class="checkedColour">
                           <label for="breadRadios2">Rice Bun</label>                        
                     </div>
 
                     <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="breadRadios3" value="breadBrioche">
+                        <input type="radio" name="attribute" id="breadRadios3" value="breadBrioche" class="checkedColour">
                         <label for="breadRadios3">Brioche</label>                        
                   </div>
                   </fieldset>            
@@ -120,17 +178,17 @@
                  <!-- Button Grid / Radios -->
                 <fieldset class="btnGrid">
                     <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="pattyRadios1" value="pattyEggplant">
+                        <input type="radio" name="attribute" id="pattyRadios1" value="pattyEggplant" class="checkedColour">
                         <label for="pattyRadios1">Eggplant</label>                        
                   </div>
 
                     <div class="btnItem">                        
-                          <input type="radio" name="attribute" id="pattyRadios2" value="pattyHalloumi">
+                          <input type="radio" name="attribute" id="pattyRadios2" value="pattyHalloumi" class="checkedColour">
                           <label for="pattyRadios2">Halloumi</label>                        
                     </div>
 
                     <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="pattyRadios3" value="pattyBeef">
+                        <input type="radio" name="attribute" id="pattyRadios3" value="pattyBeef" class="checkedColour">
                         <label for="pattyRadios3">Beef</label>                        
                   </div>
                   </fieldset>   
@@ -150,17 +208,17 @@
                  <!-- Button Grid / Radios -->
                 <fieldset class="btnGrid">
                     <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="cheeseRadios1" value="cheeseSoyBased">
+                        <input type="radio" name="attribute" id="cheeseRadios1" value="cheeseSoyBased" class="checkedColour">
                         <label for="cheeseRadios1">Soy Based</label>                        
                   </div>
 
                     <div class="btnItem">                        
-                          <input type="radio" name="attribute" id="cheeseRadios2" value="cheeseSwiss">
+                          <input type="radio" name="attribute" id="cheeseRadios2" value="cheeseSwiss" class="checkedColour">
                           <label for="cheeseRadios2">Swiss</label>                        
                     </div>
 
                     <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="cheeseRadios3" value="cheeseCheddar">
+                        <input type="radio" name="attribute" id="cheeseRadios3" value="cheeseCheddar" class="checkedColour">
                         <label for="cheeseRadios3">Cheddar</label>                        
                   </div>
                   </fieldset>   
@@ -182,17 +240,17 @@
                 <div class="btnGrid">
                     <!-- Checkboxes -->
                     <div class="btnItem">
-                        <input type="checkbox" id="extrasCheckbox1" value="extrasLettuce" name="attribute">
+                        <input type="checkbox" id="extrasCheckbox1" value="extrasLettuce" name="attribute" class="checkedColour">
                         <label for="extrasCheckbox1">Lettuce</label>
                     </div>
 
                     <div class="btnItem">
-                        <input type="checkbox" id="extrasCheckbox2" value="extrasTomato" name="attribute">
+                        <input type="checkbox" id="extrasCheckbox2" value="extrasTomato" name="attribute" class="checkedColour">
                         <label for="extrasCheckbox2">Tomato</label>
                     </div>
 
                     <div class="btnItem">
-                        <input type="checkbox" id="extrasCheckbox3" value="extrasPickles" name="attribute">
+                        <input type="checkbox" id="extrasCheckbox3" value="extrasPickles" name="attribute" class="checkedColour">
                         <label for="extrasCheckbox3">Pickles</label>
                     </div>                                    
             </div>

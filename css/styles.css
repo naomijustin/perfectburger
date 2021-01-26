@@ -13,6 +13,19 @@ h3 {
     color:  #4E54D9;
 }
 
+h1, h2 {
+    color: #FF6469;
+    text-shadow: -4px 2px #FFF; 
+}
+
+h1 {
+    font-size: 13vw;
+}
+
+h2 {
+    font-size: 7vw;
+}
+
 /* ==============================================
                     Top Section
 ===============================================*/
@@ -27,10 +40,11 @@ h3 {
 
 #topCardItem {       
     width: 50vw;
-    max-width: 650px;
-    min-width: 300px;
+    max-width: 550px;
+    min-width: 250px;
     align-self: center;
    justify-self: center;
+   padding-top: 20px;
 }
 
 /* ==============================================
@@ -121,8 +135,30 @@ color: #FFF;
     } 
 }
 
+/* ============ Below 473px =============== */
 @media only screen and (max-width: 473px) {
     .btnGrid {
         grid-template-columns: auto;
-    } 
+    }
+    
+    /* ------------ Top Card Title Font ------------- */
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+}
+
+/* ============ Above 1120px =============== */
+@media only screen and (min-width: 1120px) {
+  /* ------------ Top Card Title Font ------------- */
+    h1 {
+        font-size: 145px;
+    }
+
+    h2 {
+        font-size: 78px;
+    }
 }

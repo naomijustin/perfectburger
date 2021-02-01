@@ -15,7 +15,8 @@ h3 {
 
 h1, h2 {
     color: #FF6469;
-    text-shadow: -4px 2px #FFF; 
+    text-shadow: -4px 2px #FFF;
+    transform: rotate(-15deg); 
 }
 
 h1 {
@@ -24,6 +25,7 @@ h1 {
 
 h2 {
     font-size: 7vw;
+    padding-right: 80px;
 }
 
 /* ==============================================
@@ -44,7 +46,7 @@ h2 {
     min-width: 250px;
     align-self: center;
    justify-self: center;
-   padding-top: 20px;
+   padding-top: 40px;
 }
 
 /* ==============================================

@@ -98,6 +98,21 @@ h2 {
     margin: 0px 5px 0px 5px;
 }
 
+.btn-secondary {
+    background-color: #FF8785;
+    border: 0px;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #fd6c6a;    
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #ff9c9a;    
+}
+
  /* ======================================== 
                   Footer
 ======================================== */

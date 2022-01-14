@@ -19,60 +19,10 @@
 </head>
  
 <body>
- 
-<!-- jQuery, then Popper.js, then Bootstrap JS -->
-   
+    <script ref="script" src="js/script.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
  
-<!-- ============================= 
-                SCRIPT
-     =============================
--->
-
-<script>
-    
-    
-
-    $(document).ready(function() {
-        var inputCheck = $('.checkedColour');
-    
-    
-    // Attempt 1
-    // for (i = 0; i < inputCheck.length; i++) {        
-    //     inputCheck[i].click(function() {
-    //         inputCheck[i].parentElement.
-    //         alert("checked");
-    //     });
-    // }
-
-        
-
-    // Checked Colour Change
-    
-    // Attempt 2
-    // for (i = 0; i < btnCheck.length; i++) {
-    //     for (a = 0; a < inputCheck.length; a++) {
-    //         inputCheck.addEventListener("click", function(event) {
-    //             if (inputCheck[a].checked == true) {
-    //             btnCheck[i].css("background-color: #CF62F0")
-    //             }
-    //         }  
-    //     }
-    // }
-    // if(document.getElementsByClassName('checkedColour').checked) {        
-    // }
-
-        
-   // Submit Form
-   document.getElementById("submit").addEventListener("click", function(event){
-        var nameField = document.getElementById('name').value;
-        alert("Thank you " + nameField + ", your order has been received!");
-    });
-
-    }); //End DOM Ready
-</script>
-
  <!-- Free Code Camp Testing <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 
 
@@ -107,25 +57,41 @@
 
             <!-- Form Start -->
             <form target="_self" id="survey-form">
-           <!-- =========== Decription Section ========== -->
-           <div class="burgerPageItem">
+           
+            <!-- Section 1 -->
+            <div class="burgerPageItem">
                 <p id="description">Choose your ingredients!</p>
-            </div> <!-- End Section -->
+            </div> 
 
            <!-- =========== Bun Section ========== -->
             <div class="burgerPageItem">
                <div class="questionWrap">
-                <h3>Bun Type?</h3>
+                    <h3>Bun Type?</h3>
                </div>
+               
                <div>
-                   
-                <!-- ==================== Bun 1 (Brioche) SVG ======================= -->                    
                 <img style="padding: 30px 0px 30px 0px;" src="https://raw.githubusercontent.com/naomijustin/perfectburger/5bc35fa90254f662b37cb04d0fd18325d6bc3709/svg/bun1_brioche.svg" alt="Burger image with a sesame seed bun">
                     
                 
                </div> 
                 
                 <!-- Button Grid / Radios -->
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Brioche
+                </label>            
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Rice Bun
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"> Sourdough
+                </label>
+              </div>
+                
+                
+                
+                
                 <fieldset class="btnGrid">
                     <div class="btnItem">                        
                         <input type="radio" name="attribute" id="breadRadios1" value="breadSourdough" class="checkedColour">

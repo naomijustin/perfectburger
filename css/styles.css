@@ -105,12 +105,14 @@ h2 {
 
 .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
     color: #fff;
-    background-color: #fd6c6a;    
+    background-color: #DF59F8;
+    border: 0px;    
 }
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: #ff9c9a;    
+    background-color: #ff9c9a;
+    border: 0px;    
 }
 
  /* ======================================== 

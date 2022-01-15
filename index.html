@@ -57,63 +57,39 @@
 
             <!-- Form Start -->
             <form target="_self" id="survey-form">
-           
-            <!-- Section 1 -->
-            <div class="burgerPageItem">
+
+                <div class="burgerPageItem">
                 <p id="description">Choose your ingredients!</p>
             </div> 
 
-           <!-- =========== Bun Section ========== -->
+           <!-- =========== Section 1 - Bun ========== -->
             <div class="burgerPageItem">
                <div class="questionWrap">
                     <h3>Bun Type?</h3>
                </div>
                
                <div>
-                <img style="padding: 30px 0px 30px 0px;" src="https://raw.githubusercontent.com/naomijustin/perfectburger/5bc35fa90254f662b37cb04d0fd18325d6bc3709/svg/bun1_brioche.svg" alt="Burger image with a sesame seed bun">
-                    
-                
+                   <img style="padding: 30px 0px 30px 0px;" src="https://raw.githubusercontent.com/naomijustin/perfectburger/5bc35fa90254f662b37cb04d0fd18325d6bc3709/svg/bun1_brioche.svg" alt="Burger image with a sesame seed bun">
                </div> 
                 
-                <!-- Button Grid / Radios -->
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    
-                <label class="btn btn-secondary active">
-                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Brioche
-                </label>            
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2" autocomplete="off"> Rice Bun
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"> Sourdough
-                </label>
-              </div>
-                
-                
-                
-                
-                <fieldset class="btnGrid">
-                    <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="breadRadios1" value="breadSourdough" class="checkedColour">
-                        <label for="breadRadios1">Sourdough</label>                        
-                  </div>
-
-                    <div class="btnItem">                        
-                          <input type="radio" name="attribute" id="breadRadios2" value="breadRiceBun" class="checkedColour">
-                          <label for="breadRadios2">Rice Bun</label>                        
-                    </div>
-
-                    <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="breadRadios3" value="breadBrioche" class="checkedColour">
-                        <label for="breadRadios3">Brioche</label>                        
-                  </div>
-                  </fieldset>            
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="bunOptions" id="optionBunBrioche" autocomplete="off" checked> Brioche
+                    </label>            
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="bunOptions" id="optionBunRiceBun" autocomplete="off"> Rice Bun
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="bunOptions" id="optionBunSourdough" autocomplete="off"> Sourdough
+                    </label>
+                </div>
                                
                <hr class="burgerhr">
 
-           </div> <!-- End Section -->
+           </div> <!-- end: Section 1 -->
 
-           <!-- =========== Patty Section ========== -->
+
+           <!-- =========== Section 2 - Patty ========== -->
            <div class="burgerPageItem">
             <div class="questionWrap">
              <h3>Patty Type?</h3>
@@ -122,28 +98,22 @@
                 insert image
             </div>
 
-                 <!-- Button Grid / Radios -->
-                <fieldset class="btnGrid">
-                    <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="pattyRadios1" value="pattyEggplant" class="checkedColour">
-                        <label for="pattyRadios1">Eggplant</label>                        
-                  </div>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="pattyOptions" id="optionPattyBeef" autocomplete="off" checked> Beef
+                </label>            
+                <label class="btn btn-secondary">
+                    <input type="radio" name="pattyOptions" id="optionPattyHalloumi" autocomplete="off"> Halloumi
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="pattyOptions" id="optionPattyEggplant" autocomplete="off"> Eggplant
+                </label>
+            </div>
 
-                    <div class="btnItem">                        
-                          <input type="radio" name="attribute" id="pattyRadios2" value="pattyHalloumi" class="checkedColour">
-                          <label for="pattyRadios2">Halloumi</label>                        
-                    </div>
-
-                    <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="pattyRadios3" value="pattyBeef" class="checkedColour">
-                        <label for="pattyRadios3">Beef</label>                        
-                  </div>
-                  </fieldset>   
-            
             <hr class="burgerhr">
         </div> <!-- End Section -->
 
-        <!-- =========== Cheese Section ========== -->
+        <!-- =========== Section 3 - Cheese ========== -->
         <div class="burgerPageItem">
             <div class="questionWrap">
              <h3>Cheese Type?</h3>
@@ -152,23 +122,17 @@
                 insert image
             </div>
 
-                 <!-- Button Grid / Radios -->
-                <fieldset class="btnGrid">
-                    <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="cheeseRadios1" value="cheeseSoyBased" class="checkedColour">
-                        <label for="cheeseRadios1">Soy Based</label>                        
-                  </div>
-
-                    <div class="btnItem">                        
-                          <input type="radio" name="attribute" id="cheeseRadios2" value="cheeseSwiss" class="checkedColour">
-                          <label for="cheeseRadios2">Swiss</label>                        
-                    </div>
-
-                    <div class="btnItem">                        
-                        <input type="radio" name="attribute" id="cheeseRadios3" value="cheeseCheddar" class="checkedColour">
-                        <label for="cheeseRadios3">Cheddar</label>                        
-                  </div>
-                  </fieldset>   
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="cheeseOptions" id="optionCheeseCheddar" autocomplete="off" checked> Cheddar
+                </label>            
+                <label class="btn btn-secondary">
+                    <input type="radio" name="cheeseOptions" id="optionCheeseSwiss" autocomplete="off"> Swiss
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="cheeseOptions" id="optionCheeseSoyBased" autocomplete="off"> Soy Based
+                </label>
+            </div>
 
             <hr class="burgerhr">
         </div> <!-- End Section -->
@@ -182,23 +146,40 @@
                 insert image
             </div>
 
-         <!-- Button Grid / Checkboxes -->
+            <div style="background-color: #FF8785; border-radius: 0.25rem;" class="px-5 py-1">
+
+                <div class="form-check form-check-inline text-white">
+                    <input type="checkbox" id="extrasCheckbox1" value="extrasLettuce" name="attribute" class="checkedColour">
+                    <label for="extrasCheckbox1" style="font-size: 18px;" class="pl-2 my-auto">Lettuce</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="extrasCheckbox2" value="extrasTomato" name="attribute" class="checkedColour">
+                    <label for="extrasCheckbox2">Tomato</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="extrasCheckbox3" value="extrasPickles" name="attribute" class="checkedColour">
+                    <label for="extrasCheckbox3">Pickles</label>
+                </div>
+
+
+
+            </div>
+
+            <!-- Button Grid / Checkboxes -->
+         
             
                 <div class="btnGrid">
                     <!-- Checkboxes -->
                     <div class="btnItem">
-                        <input type="checkbox" id="extrasCheckbox1" value="extrasLettuce" name="attribute" class="checkedColour">
-                        <label for="extrasCheckbox1">Lettuce</label>
+                        
                     </div>
 
                     <div class="btnItem">
-                        <input type="checkbox" id="extrasCheckbox2" value="extrasTomato" name="attribute" class="checkedColour">
-                        <label for="extrasCheckbox2">Tomato</label>
+                        
                     </div>
 
                     <div class="btnItem">
-                        <input type="checkbox" id="extrasCheckbox3" value="extrasPickles" name="attribute" class="checkedColour">
-                        <label for="extrasCheckbox3">Pickles</label>
+                        
                     </div>                                    
             </div>
             

@@ -137,7 +137,7 @@
             <hr class="burgerhr">
         </div> <!-- End Section -->
 
-        <!-- =========== Extras Section ========== -->
+        <!-- =========== Section 4 - Extras ========== -->
         <div class="burgerPageItem">
             <div class="questionWrap">
              <h3>Extras?</h3>
@@ -149,68 +149,48 @@
             <div style="background-color: #FF8785; border-radius: 0.25rem;" class="px-5 py-1">
 
                 <div class="form-check form-check-inline text-white">
-                    <input type="checkbox" id="extrasCheckbox1" value="extrasLettuce" name="attribute" class="checkedColour">
-                    <label for="extrasCheckbox1" style="font-size: 18px;" class="pl-2 my-auto">Lettuce</label>
+                    <input type="checkbox" id="chkOptionExtrasLettuce" value="extrasLettuce" name="attribute" class="checkedColour">
+                    <label for="chkOptionExtrasLettuce" style="font-size: 18px;" class="pl-2 my-auto">Lettuce</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input type="checkbox" id="extrasCheckbox2" value="extrasTomato" name="attribute" class="checkedColour">
-                    <label for="extrasCheckbox2">Tomato</label>
+                <div class="form-check form-check-inline text-white">
+                    <input type="checkbox" id="chkOptionExtrasTomato" value="extrasTomato" name="attribute" class="checkedColour">
+                    <label for="chkOptionExtrasTomato" style="font-size: 18px;" class="pl-2 my-auto">Tomato</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input type="checkbox" id="extrasCheckbox3" value="extrasPickles" name="attribute" class="checkedColour">
-                    <label for="extrasCheckbox3">Pickles</label>
+                <div class="form-check form-check-inline text-white">
+                    <input type="checkbox" id="chkOptionExtrasPickles" value="extrasPickles" name="attribute" class="checkedColour">
+                    <label for="chkOptionExtrasPickles" style="font-size: 18px;" class="pl-2 my-auto">Pickles</label>
                 </div>
-
-
 
             </div>
 
-            <!-- Button Grid / Checkboxes -->
-         
-            
-                <div class="btnGrid">
-                    <!-- Checkboxes -->
-                    <div class="btnItem">
-                        
-                    </div>
-
-                    <div class="btnItem">
-                        
-                    </div>
-
-                    <div class="btnItem">
-                        
-                    </div>                                    
-            </div>
-            
             <hr class="burgerhr">
         </div> <!-- End Section -->
 
         <!-- =========== Bottom Form Section ========== -->
         <div class="burgerPageItem">            
                 <div class="form-group">
-                  <label id="name-label" for="name">Name</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="eg. Jane Doe" required>                  
+                  <label for="txtName">Name</label>
+                  <input type="text" class="form-control" id="txtName" aria-describedby="name" placeholder="eg. Jane Doe" required>                  
                 </div>                
                 <div class="form-group">
-                    <label id="email-label" for="email">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="eg. test@test.com" required>                  
+                    <label for="txtEmail">Email</label>
+                    <input type="email" class="form-control" id="txtEmail" aria-describedby="email" placeholder="eg. test@test.com" required>                  
                 </div>
                 <div class="form-group">
-                    <label id="number-label" for="number">Quantity</label>
-                    <input type="number" class="form-control" id="number" aria-describedby="number" placeholder="eg. 1"  min="1" max="5" required>                  
+                    <label for="txtQuantity">Quantity</label>
+                    <input type="number" class="form-control" id="txtQuantity" aria-describedby="number" placeholder="eg. 1"  min="1" max="5" required>                  
                 </div>
                 <div class="form-group">
-                    <label id="number-label" for="number">Receive your burger</label>
-                    <select id="dropdown" class="form-control">
-                        <option value="">Please select...</option>
+                    <label for="ddlReceiveType">Receive your burger</label>
+                    <select id="ddlReceiveType" class="form-control">
+                        <option disabled selected value="">Please select...</option>
                         <option value="pickup">Pickup</option>
                         <option value="delivery">Delivery (+$5.00)</option>
                       </select>    
                 </div>
                 <div class="form-group">
-                    <label for="notes">Notes</label>
-                    <textarea class="form-control" id="notes" aria-describedby="notes" placeholder="Notes (Optional)"></textarea>                  
+                    <label for="txtAreaNotes">Notes</label>
+                    <textarea class="form-control" id="txtAreaNotes" aria-describedby="notes" placeholder="Notes (Optional)"></textarea>                  
                 </div>                            
                 <button id="submit" type="submit" class="btn btn-primary">Submit</button>
               </form>

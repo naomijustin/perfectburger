@@ -9,12 +9,14 @@ $('.bunOptions').change(function(){
 
 var checkSelection = function (imgClass, optionClass) {
     $(imgClass).addClass('display-none');
-    $.each(optionClass, function() {
-        if ((this).is(':checked')) {
-            var data = $(this).prop('data-id');
-            alert(data);
-        }
-    });
+    console.log($('.bunOptions:checked').attr('data-id'));
+
+    // $.each(optionClass, function() {
+    //     if ((this).is(':checked')) {
+    //         var data = $(this).prop('data-id');
+    //         alert(data);
+    //     }
+    // });
 }
 
 

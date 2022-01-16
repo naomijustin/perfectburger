@@ -69,20 +69,20 @@
                </div>
                
                <div style="max-width: 500px">
-                   <img style="padding: 30px 0px 30px 0px;" class="w-75"  src="https://raw.githubusercontent.com/naomijustin/perfectburger/5bc35fa90254f662b37cb04d0fd18325d6bc3709/svg/bun1_brioche.svg" alt="Brioche Bun image">
-                   <img style="padding: 30px 0px 30px 0px;" class="w-75" src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/bun2_rice.svg" alt="Rice Bun image">
-                   <img style="padding: 30px 0px 30px 0px;" class="w-75" src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/bun3_sourdough.svg" alt="Sourdough bun image">
+                   <img id="imgBunBrioche" class="w-75 bunsImages" style="padding: 30px 0px 30px 0px;"src="https://raw.githubusercontent.com/naomijustin/perfectburger/5bc35fa90254f662b37cb04d0fd18325d6bc3709/svg/bun1_brioche.svg" alt="Brioche Bun image">
+                   <img id="imgBunBrioche" class="w-75 bunsImages" style="padding: 30px 0px 30px 0px;" src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/bun2_rice.svg" alt="Rice Bun image">
+                   <img id="imgBunBrioche" class="w-75 bunsImages" style="padding: 30px 0px 30px 0px;" src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/bun3_sourdough.svg" alt="Sourdough bun image">
                </div> 
                 
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-secondary active">
-                        <input type="radio" name="bunOptions" id="optionBunBrioche" autocomplete="off" checked> Brioche
+                        <input type="radio" class="bunOptions" name="bunOptions" id="optionBunBrioche" autocomplete="off" data-id="BunBrioche" checked> Brioche
                     </label>            
                     <label class="btn btn-secondary">
-                        <input type="radio" name="bunOptions" id="optionBunRiceBun" autocomplete="off"> Rice Bun
+                        <input type="radio" class="bunOptions" name="bunOptions" id="optionBunRice" data-id="BunRice" autocomplete="off"> Rice Bun
                     </label>
                     <label class="btn btn-secondary">
-                        <input type="radio" name="bunOptions" id="optionBunSourdough" autocomplete="off"> Sourdough
+                        <input type="radio" class="bunOptions" name="bunOptions" id="optionBunSourdough" data-id="BunSourdough" autocomplete="off"> Sourdough
                     </label>
                 </div>
                                

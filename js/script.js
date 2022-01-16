@@ -1,5 +1,47 @@
 $(document).ready(function() {
     
+$('.bunOptions').change(function(){
+    
+    checkSelection($('.bunsImages'), $('.bunOptions'));
+    $('.bunsImages').addClass('display-none');
+
+});
+
+var checkSelection = function (imgClass, optionClass) {
+    $(imgClass).addClass('display-none');
+    $.each(optionClass, function() {
+        if ((this).is(':checked')) {
+            var data = $(this).prop('data-id');
+            alert(data);
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ============ PREV ========================
+
     var inputCheck = $('.checkedColour');
 
 

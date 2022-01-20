@@ -3,13 +3,16 @@ $(document).ready(function() {
 $('.bunOptions').change(function(){
     
     checkSelection($('.bunsImages'), $('.bunOptions'));
-    $('.bunsImages').addClass('display-none');
+    //$('.bunsImages').addClass('d-none');
 
 });
 
 var checkSelection = function (imgClass, optionClass) {
-    $(imgClass).addClass('display-none');
-    console.log($('.bunOptions:checked').attr('data-id'));
+    $(imgClass).addClass('d-none');
+    //console.log($('.bunOptions:checked').attr('data-id'));
+    var selected = $('.bunOptions:checked').attr('data-id');
+    console.log(selected);
+    $('#img' + selected).removeClass('d-none');
 
     // $.each(optionClass, function() {
     //     if ((this).is(':checked')) {

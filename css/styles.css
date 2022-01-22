@@ -141,8 +141,23 @@ font-size: 22px;
 color: #FFF;
 }
     
+/* ============================================
+                Animation
+============================================= */
+.bunsImages, .pattyImages, .cheeseImages {
+    animation-name: slide;
+    animation-duration: 750ms;
+}
 
+@keyframes slide {
+    from {
+        margin-right: 100%;
+    }
 
+    to {
+        margin-right: 0%;
+    }
+}
 
 /* ===============================================
                 Responsive

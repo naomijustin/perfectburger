@@ -23,7 +23,17 @@ $(document).ready(function() {
         $('#img' + selected).removeClass('d-none');
     }
 
-
+    // Extras Checkboxes
+    $('.extrasOptions').click(function () {
+        $('.extraImages').addClass('d-none');
+        var allSelected = [];
+        $.each($('.extrasOptions'), function() {
+            if ($(this).is(':checked')) {
+                var selected = $(this).attr('data-id');
+                $('#img' + selected).removeClass('d-none');
+            }
+        })
+    });
 
 
 

@@ -11,6 +11,9 @@ $(document).ready(function() {
     });
 
     // Cheese Options
+    $('.cheeseOptions').change(function(){
+        checkSelection($('.cheeseImages'), $('.cheeseOptions:checked'));
+    });
 
     var checkSelection = function (imgClass, optionClassChecked) {
         $(imgClass).addClass('d-none');

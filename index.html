@@ -98,20 +98,20 @@
             </div>
 
             <div style="max-width: 500px">
-                <img style="padding: 30px 0px 30px 0px;" class="w-100"  src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/patty1_beef.svg" alt="Beef Patty image">
-                <img style="padding: 30px 0px 30px 0px;" class="w-100" src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/patty2_halloumi.svg" alt="Halloumi Patty image">
-                <img style="padding: 30px 0px 30px 0px;" class="w-100" src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/patty3_eggplant.svg" alt="Eggplant Patty image">
+                <img id="imgPattyBeef" style="padding: 30px 0px 30px 0px;" class="w-100 pattyImages"  src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/patty1_beef.svg" alt="Beef Patty image">
+                <img id="imgPattyHalloumi" style="padding: 30px 0px 30px 0px;" class="w-100 pattyImages d-none" src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/patty2_halloumi.svg" alt="Halloumi Patty image">
+                <img id="imgPattyEggplant" style="padding: 30px 0px 30px 0px;" class="w-100 pattyImages d-none" src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/svg/patty3_eggplant.svg" alt="Eggplant Patty image">
             </div>
 
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary active">
-                    <input type="radio" name="pattyOptions" id="optionPattyBeef" autocomplete="off" checked> Beef
+                    <input type="radio" class="pattyOptions" name="pattyOptions" id="optionPattyBeef" autocomplete="off" data-id="PattyBeef" checked> Beef
                 </label>            
                 <label class="btn btn-secondary">
-                    <input type="radio" name="pattyOptions" id="optionPattyHalloumi" autocomplete="off"> Halloumi
+                    <input type="radio" class="pattyOptions" name="pattyOptions" id="optionPattyHalloumi" autocomplete="off" data-id="PattyHalloumi"> Halloumi
                 </label>
                 <label class="btn btn-secondary">
-                    <input type="radio" name="pattyOptions" id="optionPattyEggplant" autocomplete="off"> Eggplant
+                    <input type="radio" class="pattyOptions" name="pattyOptions" id="optionPattyEggplant" autocomplete="off" data-id="PattyEggplant"> Eggplant
                 </label>
             </div>
 

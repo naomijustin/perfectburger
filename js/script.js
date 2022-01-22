@@ -1,26 +1,24 @@
 $(document).ready(function() {
-    
-$('.bunOptions').change(function(){
-    
-    checkSelection($('.bunsImages'), $('.bunOptions'));
-    //$('.bunsImages').addClass('d-none');
 
-});
+    // Bun Options
+    $('.bunOptions').change(function(){
+        checkSelection($('.bunsImages'), $('.bunOptions:checked'));
+    });
 
-var checkSelection = function (imgClass, optionClass) {
-    $(imgClass).addClass('d-none');
-    //console.log($('.bunOptions:checked').attr('data-id'));
-    var selected = $('.bunOptions:checked').attr('data-id');
-    console.log(selected);
-    $('#img' + selected).removeClass('d-none');
+    // Patty Options
+    $('.pattyOptions').change(function(){
+        checkSelection($('.pattyImages'), $('.pattyOptions:checked'));
+    });
 
-    // $.each(optionClass, function() {
-    //     if ((this).is(':checked')) {
-    //         var data = $(this).prop('data-id');
-    //         alert(data);
-    //     }
-    // });
-}
+    // Cheese Options
+
+    var checkSelection = function (imgClass, optionClassChecked) {
+        $(imgClass).addClass('d-none');
+        console.log($(optionClassChecked).attr('data-id'));
+        var selected = $(optionClassChecked).attr('data-id');
+        console.log(selected);
+        $('#img' + selected).removeClass('d-none');
+    }
 
 
 

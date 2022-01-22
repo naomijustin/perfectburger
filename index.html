@@ -24,7 +24,51 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
  
  <!-- Free Code Camp Testing <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+<script>
+    $(document).ready(function() {
 
+// Bun Options
+$('.bunOptions').change(function(){
+    checkSelection($('.bunsImages'), $('.bunOptions:checked'));
+});
+
+// Patty Options
+$('.pattyOptions').change(function(){
+    checkSelection($('.pattyImages'), $('.pattyOptions:checked'));
+});
+
+// Cheese Options
+$('.cheeseOptions').change(function(){
+    checkSelection($('.cheeseImages'), $('.cheeseOptions:checked'));
+});
+
+var checkSelection = function (imgClass, optionClassChecked) {
+    $(imgClass).addClass('d-none');
+    console.log($(optionClassChecked).attr('data-id'));
+    var selected = $(optionClassChecked).attr('data-id');
+    console.log(selected);
+    $('#img' + selected).removeClass('d-none');
+}
+
+// Extras Checkboxes ()
+$('.extrasOptions').click(function () {
+    $('.extraImages').addClass('d-none');
+    var allSelected = [];
+    $.each($('.extrasOptions'), function() {
+        if ($(this).is(':checked')) {
+            var selected = $(this).attr('data-id');
+            $('#img' + selected).removeClass('d-none');
+        }
+    })
+});
+// Submit Form
+document.getElementById("submit").addEventListener("click", function(event){
+var nameField = document.getElementById('name').value;
+alert("Thank you " + nameField + ", your order has been received!");
+});
+
+}); //End DOM Ready
+</script>
 
  <!-- ============================= 
             HTML MARKUP

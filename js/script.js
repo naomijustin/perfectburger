@@ -35,62 +35,70 @@ $(document).ready(function() {
         })
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ============ PREV ========================
-
-    var inputCheck = $('.checkedColour');
-
-
-// Attempt 1
-// for (i = 0; i < inputCheck.length; i++) {        
-//     inputCheck[i].click(function() {
-//         inputCheck[i].parentElement.
-//         alert("checked");
-//     });
-// }
-
     
+// === Submit Form ===
+$('#btnSubmitForm').click(function(e){
+    e.preventDefault();
+    var error = false;
+    $('#sectionForm input').removeClass('is-invalid');
+    $('#sectionForm select').removeClass('is-invalid');
+    $('#sectionForm input').removeClass('is-valid');
+    $('#sectionForm select').removeClass('is-valid');
 
-// Checked Colour Change
+    // Name
+    if ($('#txtName').val() == '' || $('#txtName').val() == null) {
+        error = true;
+        $('#txtName').addClass('is-invalid');
+    } else {
+        $('#txtName').addClass('is-valid');
+    }
 
-// Attempt 2
-// for (i = 0; i < btnCheck.length; i++) {
-//     for (a = 0; a < inputCheck.length; a++) {
-//         inputCheck.addEventListener("click", function(event) {
-//             if (inputCheck[a].checked == true) {
-//             btnCheck[i].css("background-color: #CF62F0")
-//             }
-//         }  
-//     }
-// }
-// if(document.getElementsByClassName('checkedColour').checked) {        
-// }
+    // Email
+    if ($('#txtEmail').val() == '' || $('#txtEmail').val() == null) {
+        error == true;
+        $('#errorEmail').text('Please enter your email.');
+        $('#txtEmail').addClass('is-invalid');
+    } else if ($('#txtEmail').val() != '' && $('#txtEmail').val() != null) {
+        var regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        var data = $('#txtEmail').val();
+        var runner = regex.test(data);
 
-    
-// Submit Form
-document.getElementById("submit").addEventListener("click", function(event){
-    var nameField = document.getElementById('name').value;
-    alert("Thank you " + nameField + ", your order has been received!");
+        if (!runner) {
+            error = true;
+            $('#errorEmail').text('Please enter a valid email.');
+            $('#txtEmail').addClass('is-invalid');
+        } else if (runner) {
+            $('#txtEmail').addClass('is-valid');
+        }
+    }
+
+    // Quantity
+    if ($('#txtQuantity').val() == '' || $('#txtQuantity').val() == null) {
+        error = true;
+        $('#txtQuantity').addClass('is-invalid');
+    } else {
+        $('#txtQuantity').addClass('is-valid');
+    }
+
+    // Receive Droplist
+    if ($('#ddlReceiveType').val() == '' || $('#ddlReceiveType').val() == null) {
+        error = true;
+        $('#ddlReceiveType').addClass('is-invalid');
+    } else {
+        $('#ddlReceiveType').addClass('is-valid');
+    }
+
+    if (error) {
+        return
+    } else if (!error) {
+        $('#inputNameEntered').text($('#txtName').val());
+        $('#modalOrderSubmitted').modal('show');
+    }
 });
+
+$('#btnCloseModal').on('click', function(){
+    window.location.reload();
+});
+
 
 }); //End DOM Ready

@@ -24,51 +24,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
  
  <!-- Free Code Camp Testing <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
-<script>
-    $(document).ready(function() {
 
-// Bun Options
-$('.bunOptions').change(function(){
-    checkSelection($('.bunsImages'), $('.bunOptions:checked'));
-});
-
-// Patty Options
-$('.pattyOptions').change(function(){
-    checkSelection($('.pattyImages'), $('.pattyOptions:checked'));
-});
-
-// Cheese Options
-$('.cheeseOptions').change(function(){
-    checkSelection($('.cheeseImages'), $('.cheeseOptions:checked'));
-});
-
-var checkSelection = function (imgClass, optionClassChecked) {
-    $(imgClass).addClass('d-none');
-    console.log($(optionClassChecked).attr('data-id'));
-    var selected = $(optionClassChecked).attr('data-id');
-    console.log(selected);
-    $('#img' + selected).removeClass('d-none');
-}
-
-// Extras Checkboxes ()
-$('.extrasOptions').click(function () {
-    $('.extraImages').addClass('d-none');
-    var allSelected = [];
-    $.each($('.extrasOptions'), function() {
-        if ($(this).is(':checked')) {
-            var selected = $(this).attr('data-id');
-            $('#img' + selected).removeClass('d-none');
-        }
-    })
-});
-// Submit Form
-document.getElementById("submit").addEventListener("click", function(event){
-var nameField = document.getElementById('name').value;
-alert("Thank you " + nameField + ", your order has been received!");
-});
-
-}); //End DOM Ready
-</script>
 
  <!-- ============================= 
             HTML MARKUP
@@ -100,7 +56,7 @@ alert("Thank you " + nameField + ", your order has been received!");
 
 
             <!-- Form Start -->
-            <form target="_self" id="survey-form">
+            <form target="_self" id="survey-form" autocomplete="off">
 
                 <div class="burgerPageItem">
                 <p id="description">Choose your ingredients!</p>
@@ -222,18 +178,24 @@ alert("Thank you " + nameField + ", your order has been received!");
         </div> <!-- End Section -->
 
         <!-- =========== Bottom Form Section ========== -->
-        <div class="burgerPageItem px-2">            
+        <div id="sectionForm" class="burgerPageItem px-2">            
                 <div class="form-group">
                   <label for="txtName">Name</label>
-                  <input type="text" class="form-control" id="txtName" aria-describedby="name" placeholder="eg. Jane Doe" required>                  
+                  <input type="text" class="form-control" id="txtName" aria-describedby="name" placeholder="eg. Jane Doe" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                  <div class="valid-feedback">Looks good!</div>                  
                 </div>                
                 <div class="form-group">
                     <label for="txtEmail">Email</label>
-                    <input type="email" class="form-control" id="txtEmail" aria-describedby="email" placeholder="eg. test@test.com" required>                  
+                    <input type="email" class="form-control" id="txtEmail" aria-describedby="email" placeholder="eg. test@test.com" required>
+                    <div id="errorEmail" class="invalid-feedback">Please enter your email.</div>
+                    <div class="valid-feedback">Looks good!</div>                  
                 </div>
                 <div class="form-group">
                     <label for="txtQuantity">Quantity</label>
-                    <input type="number" class="form-control" id="txtQuantity" aria-describedby="number" placeholder="eg. 1"  min="1" max="5" required>                  
+                    <input type="number" class="form-control" id="txtQuantity" aria-describedby="number" placeholder="eg. 1"  min="1" max="5" required>
+                    <div class="invalid-feedback">Please enter quantity.</div>
+                    <div class="valid-feedback">Looks good!</div>                     
                 </div>
                 <div class="form-group">
                     <label for="ddlReceiveType">Receive your burger</label>
@@ -241,15 +203,17 @@ alert("Thank you " + nameField + ", your order has been received!");
                         <option disabled selected value="">Please select...</option>
                         <option value="pickup">Pickup</option>
                         <option value="delivery">Delivery (+$5.00)</option>
-                      </select>    
+                    </select>
+                    <div class="invalid-feedback">Please choose how you will receive your order.</div>
+                    <div class="valid-feedback">Looks good!</div>          
                 </div>
                 <div class="form-group">
                     <label for="txtAreaNotes">Notes</label>
                     <textarea class="form-control" id="txtAreaNotes" aria-describedby="notes" placeholder="Notes (Optional)"></textarea>                  
                 </div>                            
-                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                <button id="btnSubmitForm" type="button" class="btn btn-primary">Submit</button>
               </form>
-        </div> <!-- End Section -->
+        </div> <!-- End Form Section -->
 
         </div> <!-- End Burger Grid -->
     </main>
@@ -276,6 +240,23 @@ alert("Thank you " + nameField + ", your order has been received!");
            
           </div>
     </footer>
+
+    <!-- Modal - Order Received -->
+    <div id="modalOrderSubmitted" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Order Received!</h5>
+              <button id="btnCloseModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you <span id="inputNameEntered"></span> for submitting your order.<br /> You will receive a confirmation email shortly!</p>
+            </div>
+          </div>
+        </div>
+      </div>
  
 </body>
 </html>

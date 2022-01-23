@@ -22,7 +22,7 @@
     <script ref="script" src="https://raw.githubusercontent.com/naomijustin/perfectburger/main/js/script.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
- 
+    <script ref="script" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> 
  <!-- Free Code Camp Testing <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 
  <!-- ============================= 
@@ -70,7 +70,7 @@ $('.extrasOptions').click(function () {
 
 
 // === Submit Form ===
-$('#btnSubmitForm').click(function(e){
+$('#submit').click(function(e){
 e.preventDefault();
 var error = false;
 $('#sectionForm input').removeClass('is-invalid');
@@ -79,52 +79,52 @@ $('#sectionForm input').removeClass('is-valid');
 $('#sectionForm select').removeClass('is-valid');
 
 // Name
-if ($('#txtName').val() == '' || $('#txtName').val() == null) {
+if ($('#name').val() == '' || $('#name').val() == null) {
     error = true;
-    $('#txtName').addClass('is-invalid');
+    $('#name').addClass('is-invalid');
 } else {
-    $('#txtName').addClass('is-valid');
+    $('#name').addClass('is-valid');
 }
 
 // Email
-if ($('#txtEmail').val() == '' || $('#txtEmail').val() == null) {
+if ($('#email').val() == '' || $('#email').val() == null) {
     error == true;
     $('#errorEmail').text('Please enter your email.');
-    $('#txtEmail').addClass('is-invalid');
-} else if ($('#txtEmail').val() != '' && $('#txtEmail').val() != null) {
+    $('#email').addClass('is-invalid');
+} else if ($('#email').val() != '' && $('#email').val() != null) {
     var regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-    var data = $('#txtEmail').val();
+    var data = $('#email').val();
     var runner = regex.test(data);
 
     if (!runner) {
         error = true;
         $('#errorEmail').text('Please enter a valid email.');
-        $('#txtEmail').addClass('is-invalid');
+        $('#email').addClass('is-invalid');
     } else if (runner) {
-        $('#txtEmail').addClass('is-valid');
+        $('#email').addClass('is-valid');
     }
 }
 
 // Quantity
-if ($('#txtQuantity').val() == '' || $('#txtQuantity').val() == null) {
+if ($('#number').val() == '' || $('#number').val() == null) {
     error = true;
-    $('#txtQuantity').addClass('is-invalid');
+    $('#number').addClass('is-invalid');
 } else {
-    $('#txtQuantity').addClass('is-valid');
+    $('#number').addClass('is-valid');
 }
 
 // Receive Droplist
-if ($('#ddlReceiveType').val() == '' || $('#ddlReceiveType').val() == null) {
+if ($('#dropdown').val() == '' || $('#dropdown').val() == null) {
     error = true;
-    $('#ddlReceiveType').addClass('is-invalid');
+    $('#dropdown').addClass('is-invalid');
 } else {
-    $('#ddlReceiveType').addClass('is-valid');
+    $('#dropdown').addClass('is-valid');
 }
 
 if (error) {
     return
 } else if (!error) {
-    $('#inputNameEntered').text($('#txtName').val());
+    $('#inputNameEntered').text($('#name').val());
     $('#modalOrderSubmitted').modal('show');
 }
 });
@@ -187,13 +187,13 @@ window.location.reload();
                 
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-secondary active">
-                        <input type="radio" class="bunOptions" name="bunOptions" id="optionBunBrioche" autocomplete="off" data-id="BunBrioche" checked> Brioche
+                        <input type="radio" class="bunOptions" value="Brioche" name="bunOptions" id="optionBunBrioche" autocomplete="off" data-id="BunBrioche" checked> Brioche
                     </label>            
                     <label class="btn btn-secondary">
-                        <input type="radio" class="bunOptions" name="bunOptions" id="optionBunRice" data-id="BunRice" autocomplete="off"> Rice Bun
+                        <input type="radio" class="bunOptions" value="Rice Bun" name="bunOptions" id="optionBunRice" data-id="BunRice" autocomplete="off"> Rice Bun
                     </label>
                     <label class="btn btn-secondary">
-                        <input type="radio" class="bunOptions" name="bunOptions" id="optionBunSourdough" data-id="BunSourdough" autocomplete="off"> Sourdough
+                        <input type="radio" class="bunOptions" value="Sourdough" name="bunOptions" id="optionBunSourdough" data-id="BunSourdough" autocomplete="off"> Sourdough
                     </label>
                 </div>
                                
@@ -216,13 +216,13 @@ window.location.reload();
 
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary active">
-                    <input type="radio" class="pattyOptions" name="pattyOptions" id="optionPattyBeef" autocomplete="off" data-id="PattyBeef" checked> Beef
+                    <input type="radio" class="pattyOptions" value="Beef" name="pattyOptions" id="optionPattyBeef" autocomplete="off" data-id="PattyBeef" checked> Beef
                 </label>            
                 <label class="btn btn-secondary">
-                    <input type="radio" class="pattyOptions" name="pattyOptions" id="optionPattyHalloumi" autocomplete="off" data-id="PattyHalloumi"> Halloumi
+                    <input type="radio" class="pattyOptions" value="Halloumi" name="pattyOptions" id="optionPattyHalloumi" autocomplete="off" data-id="PattyHalloumi"> Halloumi
                 </label>
                 <label class="btn btn-secondary">
-                    <input type="radio" class="pattyOptions" name="pattyOptions" id="optionPattyEggplant" autocomplete="off" data-id="PattyEggplant"> Eggplant
+                    <input type="radio" class="pattyOptions" value="Eggplant" name="pattyOptions" id="optionPattyEggplant" autocomplete="off" data-id="PattyEggplant"> Eggplant
                 </label>
             </div>
 
@@ -243,13 +243,13 @@ window.location.reload();
 
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary active">
-                    <input type="radio" class="cheeseOptions" name="cheeseOptions" id="optionCheeseCheddar" data-id="CheeseCheddar" autocomplete="off" checked> Cheddar
+                    <input type="radio" class="cheeseOptions" value="Cheddar" name="cheeseOptions" id="optionCheeseCheddar" data-id="CheeseCheddar" autocomplete="off" checked> Cheddar
                 </label>            
                 <label class="btn btn-secondary">
-                    <input type="radio" class="cheeseOptions" name="cheeseOptions" id="optionCheeseSwiss" data-id="CheeseSwiss" autocomplete="off"> Swiss
+                    <input type="radio" class="cheeseOptions" value="Swiss" name="cheeseOptions" id="optionCheeseSwiss" data-id="CheeseSwiss" autocomplete="off"> Swiss
                 </label>
                 <label class="btn btn-secondary">
-                    <input type="radio" class="cheeseOptions" name="cheeseOptions" id="optionCheeseTofu" data-id="CheeseTofu" autocomplete="off"> Tofu
+                    <input type="radio" class="cheeseOptions" value="Tofu" name="cheeseOptions" id="optionCheeseTofu" data-id="CheeseTofu" autocomplete="off"> Tofu
                 </label>
             </div>
 
@@ -288,29 +288,29 @@ window.location.reload();
             <hr class="burgerhr my-5">
         </div> <!-- End Section -->
 
-        <!-- =========== Bottom Form Section ========== -->
+        <!-- =========== Form Section ========== -->
         <div id="sectionForm" class="burgerPageItem px-2">            
                 <div class="form-group">
-                  <label for="txtName">Name</label>
-                  <input type="text" class="form-control" id="txtName" aria-describedby="name" placeholder="eg. Jane Doe" required>
+                  <label id="name-label" for="name">Name</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="eg. Jane Doe" required>
                   <div class="invalid-feedback">Please enter your name.</div>
                   <div class="valid-feedback">Looks good!</div>                  
                 </div>                
                 <div class="form-group">
-                    <label for="txtEmail">Email</label>
-                    <input type="email" class="form-control" id="txtEmail" aria-describedby="email" placeholder="eg. test@test.com" required>
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="eg. test@test.com" required>
                     <div id="errorEmail" class="invalid-feedback">Please enter your email.</div>
                     <div class="valid-feedback">Looks good!</div>                  
                 </div>
                 <div class="form-group">
-                    <label for="txtQuantity">Quantity</label>
-                    <input type="number" class="form-control" id="txtQuantity" aria-describedby="number" placeholder="eg. 1"  min="1" max="5" required>
+                    <label id="number-label" for="number">Quantity</label>
+                    <input type="number" class="form-control" id="number" aria-describedby="number" placeholder="eg. 1"  min="1" max="5" required>
                     <div class="invalid-feedback">Please enter quantity.</div>
                     <div class="valid-feedback">Looks good!</div>                     
                 </div>
                 <div class="form-group">
-                    <label for="ddlReceiveType">Receive your burger</label>
-                    <select id="ddlReceiveType" class="form-control">
+                    <label for="dropdown">Receive your burger</label>
+                    <select id="dropdown" class="form-control">
                         <option disabled selected value="">Please select...</option>
                         <option value="pickup">Pickup</option>
                         <option value="delivery">Delivery (+$5.00)</option>
@@ -322,7 +322,7 @@ window.location.reload();
                     <label for="txtAreaNotes">Notes</label>
                     <textarea class="form-control" id="txtAreaNotes" aria-describedby="notes" placeholder="Notes (Optional)"></textarea>                  
                 </div>                            
-                <button id="btnSubmitForm" type="button" class="btn btn-primary">Submit</button>
+                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
               </form>
         </div> <!-- End Form Section -->
 
